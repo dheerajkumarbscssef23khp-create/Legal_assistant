@@ -1,0 +1,25 @@
+{"type": "question", "timestamp": 1763531259.184124, "query_length": 5, "response_length": 362, "duration": 2.7578680515289307, "success": true}
+{"type": "document", "timestamp": 1763531280.2420495, "file_size_bytes": 978578, "extracted_text_length": 30000, "duration": 5.3134071826934814, "success": true}
+{"type": "question", "timestamp": 1763577900.7222674, "query_length": 5, "response_length": 417, "duration": 2.7166271209716797, "success": true}
+{"type": "question", "timestamp": 1763577954.1624541, "query_length": 61, "response_length": 786, "duration": 4.2633376121521, "success": true}
+{"type": "document", "timestamp": 1763578037.1801896, "file_size_bytes": 978578, "extracted_text_length": 30000, "duration": 7.6692633628845215, "success": true}
+{"type": "question", "timestamp": 1763578059.008569, "query_length": 20, "response_length": 214, "duration": 1.9838359355926514, "success": true}
+{"type": "question", "timestamp": 1763578094.769445, "query_length": 28, "response_length": 570, "duration": 4.094316005706787, "success": true}
+{"type": "question", "timestamp": 1764051838.2760952, "query_length": 5, "response_length": 133, "duration": 0.0001609325408935547, "success": true}
+{"type": "question", "timestamp": 1764051970.881155, "query_length": 5, "response_length": 122, "duration": 2.3728270530700684, "success": true}
+{"type": "question", "timestamp": 1764052030.3698437, "query_length": 5, "response_length": 335, "duration": 1.5026776790618896, "success": true}
+{"type": "question", "timestamp": 1764052056.8074481, "query_length": 31, "response_length": 1534, "duration": 4.289427995681763, "success": true}
+{"type": "question", "timestamp": 1764052070.3924654, "query_length": 33, "response_length": 3155, "duration": 9.811680316925049, "success": true}
+{"type": "question", "timestamp": 1764052233.0932918, "query_length": 33, "response_length": 2119, "duration": 5.2084126472473145, "success": true}
+{"type": "question", "timestamp": 1764052320.816261, "query_length": 33, "response_length": 2122, "duration": 6.63051438331604, "success": true}
+{"type": "document", "success": false, "reason": "Parsing failed"}
+{"type": "question", "timestamp": 1764052430.3361502, "query_length": 21, "response_length": 876, "duration": 3.960299253463745, "success": true}
+{"type": "question", "timestamp": 1764053607.4585943, "query_length": 41, "response_length": 1784, "duration": 3.930408000946045, "success": true}
+{"type": "question", "timestamp": 1764083188.6720064, "query_length": 5, "response_length": 332, "duration": 2.5526556968688965, "success": true}
+{"type": "question", "timestamp": 1764083218.661113, "query_length": 30, "response_length": 493, "duration": 2.8832075595855713, "success": true}
+{"type": "question", "timestamp": 1764083299.4471598, "query_length": 66, "response_length": 1029, "duration": 9.043145179748535, "success": true}
+{"type": "document", "timestamp": 1764083366.056209, "file_size_bytes": 978578, "extracted_text_length": 30000, "duration": 4.890174150466919, "success": true}
+{"type": "question", "timestamp": 1764083541.4793594, "query_length": 82, "response_length": 725, "duration": 7.784908056259155, "success": true}
+{"type": "question", "timestamp": 1764083565.6619186, "query_length": 84, "response_length": 1074, "duration": 10.965097188949585, "success": true}
+{"type": "document", "success": false, "reason": "Unsupported format"}
+{"type": "question", "timestamp": 1764084064.441836, "query_length": 84, "response_length": 731, "duration": 12.402974367141724, "success": true}

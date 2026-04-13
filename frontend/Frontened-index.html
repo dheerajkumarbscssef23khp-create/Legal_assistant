@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Legal Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="frontend-style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🏛️ AI Legal Assistant</h1>
+            <p class="project-info">Enhancing legal research with AI.</p>
+        </div>
+        <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">☀️ Toggle Theme</button>
+    </header>
+
+    <main class="content-wrapper">
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'QnA')">Ask AI (Q&A)</button>
+            <button class="tab-btn" onclick="openTab(event, 'DocumentAnalyzer')">📄 Document Analyzer</button>
+            <button class="tab-btn" onclick="openTab(event, 'PakistanNews')">📰 Pakistan News</button>
+        </div>
+        
+        <div id="QnA" class="tab-content">
+            <section class="assistant-section card-hover">
+                <h2>Ask a Quick Legal Question</h2>
+                <div class="input-group">
+                    <textarea id="question" placeholder="Enter your legal question here..."></textarea>
+                    <button onclick="askAI()" class="primary-btn">Ask AI</button>
+                </div>
+            </section>
+        </div>
+        
+        <div id="DocumentAnalyzer" class="tab-content" style="display:none;">
+            <section class="document-section card-hover">
+                <h2>📄 Document Analyzer</h2>
+                <div class="input-group file-upload-group">
+                    <label for="fileInput" class="custom-file-label secondary-btn">
+                        Select File
+                    </label>
+                    <input type="file" id="fileInput" class="file-input" onchange="updateFileName(this)" />
+                    <span id="fileNameDisplay" class="file-name-display">No file selected.</span>
+                    <button onclick="uploadDocument()" class="primary-btn analysis-btn">Analyze Document</button>
+                </div>
+            </section>
+        </div>
+        
+        <div id="PakistanNews" class="tab-content" style="display:none;">
+            <section class="news-section card-hover">
+                <h2>📰 Latest Pakistan News</h2>
+                <button onclick="fetchPakistanNews()" class="primary-btn">Refresh News</button>
+                <div id="news-container" class="news-grid">
+                    <p class="loading-message">Click 'Refresh News' to load the latest headlines. (Requires backend integration with a News API)</p>
+                </div>
+            </section>
+        </div>
+        
+        <hr class="creative-divider">
+
+        <section class="response-section card-hover">
+            <h3>Response:</h3>
+            <pre id="response" class="response-box">Waiting for query...</pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Legal AI Project</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const button = document.getElementById('themeToggle');
+            if (document.body.classList.contains('dark-mode')) {
+                button.innerHTML = '🌙 Toggle Theme';
+            } else {
+                button.innerHTML = '☀️ Toggle Theme';
+            }
+        }
+        
+        function updateFileName(input) {
+            const display = document.getElementById('fileNameDisplay');
+            if (input.files.length > 0) {
+                display.textContent = input.files[0].name;
+            } else {
+                display.textContent = 'No file selected.';
+            }
+        }
+
+        // Function to handle tab switching
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            const tabcontent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the "active" class from all tab buttons
+            const tablinks = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+            
+            // Auto-fetch news when the news tab is opened (optional)
+            if (tabName === 'PakistanNews') {
+                 // fetchPakistanNews(); // Uncomment this once the function is fully implemented
+            }
+        }
+    </script>
+    <script src="frontend-app.js"></script> 
+</body>
+</html>
