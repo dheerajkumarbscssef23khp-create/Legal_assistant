@@ -17,7 +17,7 @@ except ImportError:
 # =========================================================================
 # NOTE: Ensure GEMINI_API_KEY environment variable is set.
 # =========================================================================
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyCSUDmVCw_xKDeSS2w18vKrKIUjmkmAFsc") 
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "Paste your Own API key") 
 
 # --- Gemini Client Setup ---
 client = None
